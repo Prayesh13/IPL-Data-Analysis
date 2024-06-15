@@ -175,7 +175,7 @@ class Points_table:
     def matches_no_result(self,data, team):
         temp_df = data[((data['Team1'] == team) | (data['Team2'] == team)) & (data['WinningTeam'].isnull())]
         return temp_df['ID'].nunique()
-    def points_table(self, df,season):
+    def points_table(self,season):
         df = ipl_data()
         df = df[df['Season'] == season]
         temp = pd.DataFrame()
